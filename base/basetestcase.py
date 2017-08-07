@@ -12,7 +12,7 @@ class BaseTestCase(unittest.TestCase):
         desired_caps['appActivity'] = '.AgreementPage'
 
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-        self.driver.implicitly_wait(30)
+        self.driver.implicitly_wait(20)
 
     def tearDown(self):
         self.driver.quit()
